@@ -10,11 +10,17 @@ import br.com.globallabs.springwebmvc.model.Jedi;
 @Repository
 public class JediRepository {
   
+  private List<Jedi> jedi;
+  
   public List<Jedi> getAllJedi() {
     
-    final List<Jedi> jedi = new ArrayList<>();
+    jedi = new ArrayList<>();
     jedi.add(new Jedi("Luke", "Skywlker"));
 
     return jedi;
+  }
+
+  public void add (final Jedi jedi) {
+    this.jedi.add(jedi);
   }
 }
