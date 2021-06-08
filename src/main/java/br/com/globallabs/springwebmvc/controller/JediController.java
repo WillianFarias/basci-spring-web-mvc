@@ -1,6 +1,6 @@
 package br.com.globallabs.springwebmvc.controller;
 
-import java.util.List;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,7 +40,7 @@ public class JediController {
   }
 
   @PostMapping("/jedi")
-  public String createJedi(@ModelAttribute Jedi jedi) {
+  public String createJedi(@Valid @ModelAttribute Jedi jedi) {
     
     repository.add(jedi);
     return "redirect:jedi";

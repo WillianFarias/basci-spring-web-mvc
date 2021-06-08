@@ -1,5 +1,7 @@
 package br.com.globallabs.springwebmvc.model;
 
+import javax.validation.constraints.NotBlank;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -7,7 +9,10 @@ import lombok.Setter;
 @Setter
 public class Jedi {
 
+  @NotBlank
   private String name;
+  
+  @NotBlank
   private String lastName;
 
   public Jedi() {}
